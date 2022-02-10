@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="Full-doc">
+      <div id="heading">
+        <h1 id="title">Laundry Service Survey Form</h1>
+
+        <p id="description">
+          kindly fill the form below. This will help us serve you better!
+        </p>
+      </div>
+      <form id="survey-form">
+        <label id="name-label" for="name">NAME:</label>
+        <input type="text" id="name" name="name" placeholder="Surname First" />
+        <label id="email-label" for="email">EMAIL:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Personal Email"
+        />
+        <label id="number-label" for="number">NUMBER:</label>
+        <input
+          type="tel"
+          id="telephone"
+          name="number"
+          pattern=".{8,}"
+          required
+          title="8 characters minimum"
+          placeholder="Phone"
+        />
+
+        <label for="sex">SEX:</label>
+        <select name="Sex" id="sex">
+          <option id="sex" value="Male">Male</option>
+          <option id="sex" value="Female">Female</option>
+        </select>
+        <div id="boxes">
+          <p style="color: black">SERVICES MOSTLY REQUESTED</p>
+          <input type="checkbox" name="service" value="Washing" />Washing
+          <input type="checkbox" name="service" value="Ironing" />Ironing
+          <input type="checkbox" name="service" value="Starching" />Starching
+
+          <p style="color: black">HOW WOULD YOU RATE OUR PERFORMANCE?</p>
+          <input type="radio" name="performance" value="Poor" /> Poor
+          <input type="radio" name="performance" value="Good" /> Good
+          <input type="radio" name="performance" value="Excellent" /> Excellent
+        </div>
+        <div id="end">
+          <textarea id="Comments" name="Comments" row="50" cols="80">
+     Additional comments here</textarea
+          >
+
+          <button type=" submit" form="survey-form" value="Submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
